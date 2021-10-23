@@ -19,10 +19,10 @@ T = int(input())
 
 for ite in range(T):
     arr = map(int, input().split())
-    c = list(arr)
+    d = list(arr)
 
-    N = c[0]
-    M = c[1]
+    N = d[0]
+    M = d[1]
 
     a = []
     for i in range(N):
@@ -36,7 +36,7 @@ for ite in range(T):
     # clear a
     del a
 
-
+    """"
     c = []
     for m in range(M):
         c.append(list('0'))
@@ -46,35 +46,42 @@ for ite in range(T):
         for j in range(M):
             if b[i][j] == 'y':
                 c[j].append(i)
+    """
 
     print(b)
-    print(c)
+    # print(c)
 
     #clear b
-    del b
 
+    """
     for i in c:
         i.pop(0)
+    """
 
     comb = n_length_combo([x for x in range(N)], 3)
 
     tot = len(comb)
 
     for i in comb:
+        print(i)
         sub = []
         for m in range(M):
             sub.append(list('0'))
 
         for j in i:
-            for k in range(len(c)):
-                if j in c[k]:
+            print(j)
+            print(b[j])
+            for k in range(len(b[j])):
+                print(b[j][k])
+                if b[j][k] == "y":
+                    print("=======================================")
                     sub[k].append(1)
-
+        print(sub)
         for i in sub:
             if len(i) == 1:
                 tot = tot - 1
                 continue
-    del c
+    #del c
 
     if tot < 0:
         print(0)
