@@ -32,7 +32,7 @@ for ite in range(T):
     b = []
     for i in a:
         b.append(list(i))
-    print(a)
+    # print(a)
     # clear a
     del a
 
@@ -48,8 +48,8 @@ for ite in range(T):
                 c[j].append(i)
     """
 
-    print(b)
-    # print(c)
+    # print(b)
+    # # print(c)
 
     #clear b
 
@@ -63,20 +63,20 @@ for ite in range(T):
     tot = len(comb)
 
     for i in comb:
-        print(i)
+        # print(i)
         sub = []
         for m in range(M):
             sub.append(list('0'))
 
         for j in i:
-            print(j)
-            print(b[j])
+            # print(j)
+            # print(b[j])
             for k in range(len(b[j])):
-                print(b[j][k])
+                # print(b[j][k])
                 if b[j][k] == "y":
-                    print("=======================================")
+                    # print("=======================================")
                     sub[k].append(1)
-        print(sub)
+        # print(sub)
         for i in sub:
             if len(i) == 1:
                 tot = tot - 1
